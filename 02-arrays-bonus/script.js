@@ -18,10 +18,19 @@ console.log(reversedTeachers);
 const longNames = null;
 
 // 3. Rimuovi 'Ed' dall'array teachers
+const index = teachers.indexOf('Ed');
+teachers.splice(index,1);
+console.log(teachers);
+
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
 const isFabioPresent = null;
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
-const teachersString = null;
+for (i = 0; i < teachers.length; i++){
+  let teachersString = `${teachers[i]},` ;
+  console.log(teachersString);
+  teachersList.innerHTML += teachersString;
+}
+
