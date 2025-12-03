@@ -12,6 +12,7 @@ const teachers = [
 // e salva il risultato nella variabile reversedTeachers
 
 //const reversedTeachers = teachers.reverse();
+
 const reversedTeachers = [];
 
 for( let i = teachers.length - 1; i >= 0; i--){
@@ -21,9 +22,17 @@ console.log(reversedTeachers);
 
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
 // con un nome di lunghezza maggiore o uguale a 5 caratteri
-const longNames = [];
-// leggere l'array (for)
-// Decisione se maggiore o uguale a 5 caratteri (length)
+
+let longNames = [];
+
+for (let i = 0; i < teachers.length; i++){
+  if (teachers[i].length >= 5){
+    longNames += `${teachers[i]} `;
+  }
+}
+ console.log(longNames);
+
+// Decisione se maggiore o uguale a 5 caratteri (lengt
 
 // 3. Rimuovi 'Ed' dall'array teachers
 const index = teachers.indexOf('Ed');
@@ -33,6 +42,7 @@ console.log(teachers);
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
+
 const isFabioPresent = teachers.includes('Fabio');
 console.log(isFabioPresent);
 
