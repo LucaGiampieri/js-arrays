@@ -32,13 +32,21 @@ for (let i = 0; i < teachers.length; i++){
 }
  console.log(longNames);
 
-// Decisione se maggiore o uguale a 5 caratteri (lengt
-
 // 3. Rimuovi 'Ed' dall'array teachers
-const index = teachers.indexOf('Ed');
-teachers.splice(index,1);
-console.log(teachers);
 
+/* const index = teachers.indexOf('Ed');
+teachers.splice(index,1);
+console.log(teachers); */
+
+const noEd = [];
+
+for (let i = 0; i < teachers.length; i++){
+  if (teachers[i]  !== 'Ed'){
+    noEd.push(teachers[i])
+  }
+}
+
+console.log(noEd);
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
@@ -51,7 +59,7 @@ console.log(isFabioPresent);
 let teachersString = [];
 
 for ( let i = 0; i < teachers.length; i++){
-  if (i !== 5){
+  if (i !== 6){
   teachersString += `${teachers[i]},`;
   }
   else{
